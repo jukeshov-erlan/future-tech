@@ -1,0 +1,66 @@
+// здесь миксин адаптивного размера шрифта
+
+@use "sass:math";
+@use "functions" as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  // 'это scss миксин takes two param 48, 16 with default
+  /*
+  clamp это встроенная функция в CSS, а не в SCSS
+  Что делает clamp()?
+   clamp(min, preferred, max) → ограничивает значение в определенных пределах.
+    min → минимальное значение
+    preferred → желаемое (динамическое) значение
+    max → максимальное значение
+  */
+  font-size: fluid($max, $min);
+}
+
+@mixin hide {
+  opacity: 0; // делает элемент полностью прозрачным (невидимым), но он по-прежнему занимает пространство на странице.
+  visibility: hidden; // скрывает элемент с визуальной стороны (не видно), но также не позволяет элементу быть кликабельным или взаимодействовать с пользователем.
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible; // делает элемент видимым и доступным для взаимодействия.
+}
+
+//Overlay menu — это тип меню, которое появляется поверх контента страницы, занимая, как правило, весь экран или часть его.
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+//миксин предназначен для улучшения доступности веб-сайтов для людей с ограниченными возможностями.
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
