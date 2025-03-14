@@ -16,8 +16,10 @@
    --color-accent: #FFD11A; 
    --color-red: #FF5500;
 
+   --border: #{rem(1)} solid var(--color-dark-15);
+
    --font-family-base: 'Inter', sans-serif;  // базовое семейство шрифтов
-   --fonte-family-accent: 'Kumbh Sans', sans-serif; // акцентное семейство шрифтов
+   --font-family-accent: 'Kumbh Sans', sans-serif; // акцентное семейство шрифтов
 
    --container-width: #{rem(1600)}; // параметры контetного контейнера
    --container-padding-x: #{rem(16)}; 
