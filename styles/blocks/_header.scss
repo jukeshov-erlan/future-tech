@@ -5,6 +5,10 @@
     padding-block: rem(20);
     text-align: center;
     border-bottom: var(--border);
+
+    @include mobile {
+      padding-block: rem(14);
+    }
   }
 
   &__body {
@@ -26,18 +30,25 @@
   }
 
   &__menu {
+
     &-list {
       display: flex;
       align-items: center;
       column-gap: rem(16);
     }
 
-    &-item {
+    @include laptop {
+      column-gap: rem(6);
     }
 
     &-link {
       padding: rem(14) rem(24);
       color: var(--colo-gray-50);
+      font-weight: 400;
+
+      @include laptop {
+        paddding: rem(10) rem(18);
+      }
 
       &.is-active {
         color: var(--color-light);
