@@ -820,7 +820,43 @@ button[aria-label]::before {
   }
 }
 
-.header {
+.hero__main {
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-areas: "body resources-preview" "metrics resources-preview";
+}
+.hero__body {
+  grid-area: body;
+  padding-top: 9.375rem;
+  padding-right: 3.125rem;
+  padding-bottom: 6.25rem;
+}
+.hero__subtitle {
+  /*
+  clamp это встроенная функция в CSS, а не в SCSS
+  Что делает clamp()?
+   clamp(min, preferred, max) → ограничивает значение в определенных пределах.
+    min → минимальное значение
+    preferred → желаемое (динамическое) значение
+    max → максимальное значение
+  */
+  font-size: clamp(1.125rem, 0.8832644628rem + 0.9917355372vw, 1.875rem);
+  font-family: var(--font-family-accent);
+  color: var(--color-dark-40);
+  font-weight: 500;
+}
+.hero__subtitle:not(:last-child) {
+  margin-bottom: 0.1875rem;
+}
+.hero__metrics {
+  grid-area: metrics;
+}
+.hero__resources-preview {
+  grid-area: resources-preview;
+}
+
+.header,
+footer {
   display: none !important;
 }
 

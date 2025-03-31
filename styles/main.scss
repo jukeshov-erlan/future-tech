@@ -14,7 +14,15 @@
 @use 'blocks/soc1als';
 @use 'blocks/footer';
 
+@use 'blocks/metrics';
+@use 'blocks/team';
+@use 'blocks/resources_preview';
+@use 'blocks/advantage_cart';
+@use 'blocks/hero';
 
-.header {
+
+
+.header,
+footer {
   display: none !important;
 }
