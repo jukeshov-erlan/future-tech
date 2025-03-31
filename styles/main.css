@@ -846,7 +846,22 @@ button[aria-label]::before {
   font-weight: 500;
 }
 .hero__subtitle:not(:last-child) {
-  margin-bottom: 0.1875rem;
+  margin-bottom: 1.875rem;
+}
+.hero__title {
+  /*
+  clamp это встроенная функция в CSS, а не в SCSS
+  Что делает clamp()?
+   clamp(min, preferred, max) → ограничивает значение в определенных пределах.
+    min → минимальное значение
+    preferred → желаемое (динамическое) значение
+    max → максимальное значение
+  */
+  font-size: clamp(1.875rem, 1.069214876rem + 3.305785124vw, 4.375rem);
+  color: var(--color-light);
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
 }
 .hero__metrics {
   grid-area: metrics;
