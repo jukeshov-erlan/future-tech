@@ -28,6 +28,11 @@
   }
 
   &__title {
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
     @include fluid-text(70, 30);
     color: var(--color-light);
     font-family: var(--font-family-accent);

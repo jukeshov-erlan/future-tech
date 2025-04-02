@@ -820,6 +820,29 @@ button[aria-label]::before {
   }
 }
 
+.metrics__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.metrics__item {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 0.625rem;
+  padding: 3.125rem;
+}
+.metrics__item:first-child {
+  padding-left: 0;
+}
+.metrics__item:not(:last-child) {
+  border-right: var(--border);
+}
+.metrics__value {
+  font-weight: 600;
+}
+.metrics__sign {
+  color: var(--color-accent);
+}
+
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
@@ -861,6 +884,9 @@ button[aria-label]::before {
   color: var(--color-light);
   font-family: var(--font-family-accent);
   font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+.hero__title:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 .hero__metrics {
