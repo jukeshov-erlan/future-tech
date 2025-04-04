@@ -843,6 +843,16 @@ button[aria-label]::before {
   color: var(--color-accent);
 }
 
+.resources-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  row-gap: 1.875rem;
+}
+.resources-preview__team {
+  display: flex;
+}
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
