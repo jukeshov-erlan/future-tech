@@ -894,6 +894,10 @@ button[aria-label]::before {
 }
 .hero__resources-preview {
   grid-area: resources-preview;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  border-left: var(--border);
+  background: url("../../images/resources_preview/bg.png") 0 0/cover no-repeat;
 }
 
 .header,
