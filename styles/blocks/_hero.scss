@@ -38,9 +38,9 @@
     font-weight: 500;
     margin-bottom: rem(20);
   }
-
   &__metrics {
     grid-area: metrics;
+    border-top: var(--border);
   }
 
   &__resources-preview {
@@ -52,6 +52,7 @@
   }
 
   &__advantages {
+    border-block: var(--border);
     &-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
