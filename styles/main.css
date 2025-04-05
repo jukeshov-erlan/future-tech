@@ -875,6 +875,47 @@ button[aria-label]::before {
   row-gap: 0.875rem;
 }
 
+.advantage-cart {
+  display: grid;
+  row-gap: 1.875rem;
+}
+.advantage-cart__link {
+  --circleSize: 3.25rem;
+  --circeMarginLeft: 1.25rem;
+  position: relative;
+  padding-right: calc(var(--circleSize) + var(--circeMarginLeft));
+  display: grid;
+  row-gap: 0.25rem;
+  font-family: var(--font-family-base);
+}
+.advantage-cart__link::after {
+  width: var(--circleSize);
+  height: var(--circleSize);
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 0;
+  background: url("../../icons/arrow-top-right_black.svg") center no-repeat var(--color-accent);
+  border-radius: 50%;
+}
+.advantage-cart__title {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+.advantage-cart__details {
+  /*
+  clamp это встроенная функция в CSS, а не в SCSS
+  Что делает clamp()?
+   clamp(min, preferred, max) → ограничивает значение в определенных пределах.
+    min → минимальное значение
+    preferred → желаемое (динамическое) значение
+    max → максимальное значение
+  */
+  font-size: clamp(0.875rem, 0.7541322314rem + 0.4958677686vw, 1.25rem);
+  font-family: var(--font-family-accent);
+}
+
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
