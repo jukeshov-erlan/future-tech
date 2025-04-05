@@ -843,6 +843,23 @@ button[aria-label]::before {
   color: var(--color-accent);
 }
 
+.team {
+  --personImageSize: 3.75rem;
+  display: flex;
+  padding: 0.625rem;
+  background-color: var(--color-dark-10);
+  border-radius: 6.25rem;
+}
+.team__person {
+  width: var(--personImageSize);
+  background-color: var(--color-dark-15);
+  border: 0.125rem solid var(--color-dark-40);
+  border-radius: 50%;
+}
+.team__person:not(:first-child) {
+  margin-left: calc(var(--personImageSize) / 4 * -1);
+}
+
 .resources-preview {
   display: flex;
   flex-direction: column;
@@ -853,6 +870,11 @@ button[aria-label]::before {
 .resources-preview__team {
   display: flex;
 }
+.resources-preview__body {
+  display: grid;
+  row-gap: 0.875rem;
+}
+
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
